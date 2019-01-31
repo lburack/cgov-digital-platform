@@ -2,45 +2,37 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.full
-    - field.field.node.cgov_blog_post.field_blog_post_body
-    - field.field.node.cgov_blog_post.field_browser_title
-    - field.field.node.cgov_blog_post.field_card_title
-    - field.field.node.cgov_blog_post.field_date_display_mode
-    - field.field.node.cgov_blog_post.field_date_posted
-    - field.field.node.cgov_blog_post.field_date_reviewed
-    - field.field.node.cgov_blog_post.field_date_updated
-    - field.field.node.cgov_blog_post.field_feature_card_description
-    - field.field.node.cgov_blog_post.field_image_article
-    - field.field.node.cgov_blog_post.field_image_promotional
-    - field.field.node.cgov_blog_post.field_list_description
-    - field.field.node.cgov_blog_post.field_page_description
-    - field.field.node.cgov_blog_post.field_search_engine_restrictions
-    - field.field.node.cgov_blog_post.field_short_title
-    - node.type.cgov_blog_post
+    - core.entity_view_mode.node.feature_card
+    - field.field.node.cgov_blog_series.field_blog_series_body
+    - field.field.node.cgov_blog_series.field_browser_title
+    - field.field.node.cgov_blog_series.field_card_title
+    - field.field.node.cgov_blog_series.field_date_display_mode
+    - field.field.node.cgov_blog_series.field_date_posted
+    - field.field.node.cgov_blog_series.field_date_reviewed
+    - field.field.node.cgov_blog_series.field_date_updated
+    - field.field.node.cgov_blog_series.field_feature_card_description
+    - field.field.node.cgov_blog_series.field_image_article
+    - field.field.node.cgov_blog_series.field_image_promotional
+    - field.field.node.cgov_blog_series.field_list_description
+    - field.field.node.cgov_blog_series.field_page_description
+    - field.field.node.cgov_blog_series.field_search_engine_restrictions
+    - field.field.node.cgov_blog_series.field_short_title
+    - node.type.cgov_blog_series
   module:
     - cgov_core
     - options
     - user
-id: node.cgov_blog_post.full
+id: node.cgov_blog_series.feature_card
 targetEntityType: node
-bundle: cgov_blog_post
-mode: full
+bundle: cgov_blog_series
+mode: feature_card
 content:
   content_moderation_control:
-    weight: 0
+    weight: -20
     region: content
     settings: {  }
     third_party_settings: {  }
   field_browser_title:
-    weight: 4
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
-  field_card_title:
     weight: 3
     label: hidden
     settings:
@@ -48,15 +40,23 @@ content:
     third_party_settings: {  }
     type: string
     region: content
+  field_card_title:
+    weight: 2
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
   field_date_display_mode:
-    weight: 14
+    weight: 10
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
   field_date_posted:
-    weight: 11
+    weight: 7
     label: hidden
     settings:
       timezone_override: ''
@@ -66,7 +66,7 @@ content:
     type: cgov_date_formatter
     region: content
   field_date_reviewed:
-    weight: 13
+    weight: 8
     label: hidden
     settings:
       timezone_override: ''
@@ -76,7 +76,7 @@ content:
     type: cgov_date_formatter
     region: content
   field_date_updated:
-    weight: 12
+    weight: 9
     label: hidden
     settings:
       timezone_override: ''
@@ -86,22 +86,6 @@ content:
     type: cgov_date_formatter
     region: content
   field_feature_card_description:
-    weight: 6
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
-  field_list_description:
-    weight: 10
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
-  field_page_description:
     weight: 5
     label: hidden
     settings:
@@ -109,8 +93,24 @@ content:
     third_party_settings: {  }
     type: string
     region: content
+  field_list_description:
+    weight: 6
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_page_description:
+    weight: 4
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
   field_short_title:
-    weight: 2
+    weight: 1
     label: hidden
     settings:
       link_to_entity: false
@@ -123,7 +123,7 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
-  field_blog_post_body: true
+  field_blog_series_body: true
   field_image_article: true
   field_image_promotional: true
   field_search_engine_restrictions: true

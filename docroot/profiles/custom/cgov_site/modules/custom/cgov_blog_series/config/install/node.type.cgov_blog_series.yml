@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies: {  }
+name: 'Blog Series'
+type: cgov_blog_series
+description: 'Blog-specific landing page that displays a dynamic listing (in reverse chronological order) of recent posts. '
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

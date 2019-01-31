@@ -3,28 +3,28 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.full
-    - field.field.node.cgov_blog_post.field_blog_post_body
-    - field.field.node.cgov_blog_post.field_browser_title
-    - field.field.node.cgov_blog_post.field_card_title
-    - field.field.node.cgov_blog_post.field_date_display_mode
-    - field.field.node.cgov_blog_post.field_date_posted
-    - field.field.node.cgov_blog_post.field_date_reviewed
-    - field.field.node.cgov_blog_post.field_date_updated
-    - field.field.node.cgov_blog_post.field_feature_card_description
-    - field.field.node.cgov_blog_post.field_image_article
-    - field.field.node.cgov_blog_post.field_image_promotional
-    - field.field.node.cgov_blog_post.field_list_description
-    - field.field.node.cgov_blog_post.field_page_description
-    - field.field.node.cgov_blog_post.field_search_engine_restrictions
-    - field.field.node.cgov_blog_post.field_short_title
-    - node.type.cgov_blog_post
+    - field.field.node.cgov_blog_series.field_blog_series_body
+    - field.field.node.cgov_blog_series.field_browser_title
+    - field.field.node.cgov_blog_series.field_card_title
+    - field.field.node.cgov_blog_series.field_date_display_mode
+    - field.field.node.cgov_blog_series.field_date_posted
+    - field.field.node.cgov_blog_series.field_date_reviewed
+    - field.field.node.cgov_blog_series.field_date_updated
+    - field.field.node.cgov_blog_series.field_feature_card_description
+    - field.field.node.cgov_blog_series.field_image_article
+    - field.field.node.cgov_blog_series.field_image_promotional
+    - field.field.node.cgov_blog_series.field_list_description
+    - field.field.node.cgov_blog_series.field_page_description
+    - field.field.node.cgov_blog_series.field_search_engine_restrictions
+    - field.field.node.cgov_blog_series.field_short_title
+    - node.type.cgov_blog_series
   module:
     - cgov_core
     - options
     - user
-id: node.cgov_blog_post.full
+id: node.cgov_blog_series.full
 targetEntityType: node
-bundle: cgov_blog_post
+bundle: cgov_blog_series
 mode: full
 content:
   content_moderation_control:
@@ -123,7 +123,7 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
-  field_blog_post_body: true
+  field_blog_series_body: true
   field_image_article: true
   field_image_promotional: true
   field_search_engine_restrictions: true
